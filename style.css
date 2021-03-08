@@ -44,6 +44,16 @@ body {
     to   { opacity: 1; }
 }
 
+.blink_me {
+animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+50% {
+  opacity: 0;
+}
+}
+
 p {
   margin: 0px 0 10px 0;
 }
