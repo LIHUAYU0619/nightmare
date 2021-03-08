@@ -5,11 +5,19 @@
   <title>Nightmare</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-  <div class="container">
+
+  <div id="load"></div>
+   <div id="contents">
+         jlkjjlkjlkjlkjlklk
+   </div>
+
+  <div class="container" id="container">
     <!-- <img src="img/candle-2.jpg" width="5%"> -->
     <!-- <p class="head">
       When he was looking into the hole<br>
@@ -18,18 +26,18 @@
       But he was glad with that<br>
       He knew that it was Rimbaud kissing him<br>
     </p> -->
-    <img src="img/1-5.jpg" width="100%">
+    <img class="post" src="img/1-5.jpg" width="100%">
     <br>
-    <img src="img/4-3.jpg" width="30%" style="margin-top:10px;">
+    <img class="post" src="img/4-3.jpg" width="30%" style="margin-top:10px;">
     <br><br>
-    <img src="img/1-10.png" width="50%" style="margin:80px 00px 80px 0px;position:relative;left:43%;">
+    <img class="post" src="img/1-10.png" width="50%" style="margin:80px 00px 80px 0px;position:relative;left:43%;">
     <br><br>
     <center><img src="img/1-9.png" width="70%"></center>
     <br><br><br>
     <img src="img/1-11.png" width="60%" style="margin-left:5%">
     <br><br><br><br>
     <img src="img/3-1.jpg" width="50%" style="margin-left:0%">
-    <!-- net -->
+
     <br><br><br><br><br>
     <img src="img/5-1.jpg" width="100%">
     <br><br><br>
@@ -96,6 +104,22 @@
     <!-- <img src="img/5-4.jpg" width="20%" style="margin-left:0%;"> -->
 
 
+
   </div>
 
 </body>
+<script>
+document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('contents').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.getElementById('contents').style.visibility="visible";
+      },1000);
+  }
+}
+</script>
+</html>
