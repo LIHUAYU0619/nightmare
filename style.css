@@ -75,10 +75,17 @@ p {
   padding: 10px;
 }
 
-.head {
+.head  {
   color: red;
   font-family: courier;
   font-size: 0.9em;
+}
+
+.end  {
+  color: red;
+  font-family: courier;
+  font-size: 1.2em;
+  margin-top:-12%;
 }
 
 /*  */
